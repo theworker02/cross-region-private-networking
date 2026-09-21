@@ -1,9 +1,10 @@
 # Acquisition package index
 
 **Product:** Cross-Region Private Networking  
-**Package version:** 1.0.0  
+**Package version:** 1.0.0 (**FROZEN** — [`../RELEASE_FREEZE.md`](../RELEASE_FREEZE.md))  
 **Classification:** CONFIDENTIAL — qualified buyers under NDA where required  
-**License:** Proprietary — no production use until written commercial license or completed acquisition ([`../LICENSE`](../LICENSE))
+**License:** Proprietary — no production use until written commercial license or completed acquisition ([`../LICENSE`](../LICENSE))  
+**Contact:** [GitHub @theworker02](https://github.com/theworker02) · [Contact page](https://theworker02.github.io/cross-region-private-networking/contact.html)
 
 > **Independent project; not affiliated with Render.**
 

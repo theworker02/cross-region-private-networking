@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0"><img alt="version" src="https://img.shields.io/badge/version-1.0.0-1F7A6B"/></a>
+  <a href="https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0"><img alt="freeze" src="https://img.shields.io/badge/release-frozen-0B1F2A"/></a>
   <a href="https://github.com/theworker02/cross-region-private-networking/actions/workflows/pages.yml"><img alt="pages" src="https://img.shields.io/github/actions/workflow/status/theworker02/cross-region-private-networking/pages.yml?branch=master&label=Pages"/></a>
   <img alt="tests" src="https://img.shields.io/badge/tests-78%20passed-1F7A6B"/>
   <img alt="license" src="https://img.shields.io/badge/license-proprietary-0B1F2A"/>
@@ -15,18 +16,19 @@
 **Global identity-aware private fabric that extends Render’s same-region private networking across regions.**
 
 > **Independent project; not affiliated with Render.**  
-> Render already provides excellent same-region private networks. This product adds cross-region names, rustls mTLS identity, path classification, and policy — preferring native private hostnames in-region (`LOCAL_NATIVE`).
+> **v1.0.0 is frozen** as the acquisition-candidate baseline — see [`RELEASE_FREEZE.md`](./RELEASE_FREEZE.md).
 
 | | |
 |---|---|
-| **Version** | **1.0.0** acquisition release |
+| **Version** | **1.0.0** (frozen) |
+| **Release** | https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0 |
 | **Repo** | https://github.com/theworker02/cross-region-private-networking |
 | **Live site** | https://theworker02.github.io/cross-region-private-networking/ |
-| **Demo** | https://theworker02.github.io/cross-region-private-networking/demo.html (**SIMULATION**) |
-| **About** | https://theworker02.github.io/cross-region-private-networking/about.html |
-| **Target (Render)** | https://theworker02.github.io/cross-region-private-networking/render.html |
-| **Contact** | https://theworker02.github.io/cross-region-private-networking/contact.html |
-| **License** | Proprietary — use only after written commercial license **or** completed acquisition ([`LICENSE`](./LICENSE)) |
+| **Demo** | [SIMULATION demo](https://theworker02.github.io/cross-region-private-networking/demo.html) |
+| **About** | [about](https://theworker02.github.io/cross-region-private-networking/about.html) |
+| **Target (Render)** | [render](https://theworker02.github.io/cross-region-private-networking/render.html) |
+| **Contact** | [contact](https://theworker02.github.io/cross-region-private-networking/contact.html) — GitHub [@theworker02](https://github.com/theworker02) |
+| **License** | Proprietary — sale / acquisition only ([`LICENSE`](./LICENSE)) |
 | **Evaluate** | `.\evaluate.ps1` or `./evaluate.sh` → `evaluation/` |
 | **Readiness** | [`ACQUISITION_READINESS_REPORT.md`](./ACQUISITION_READINESS_REPORT.md) |
 
@@ -34,7 +36,7 @@
 
 Render private networking is **region-scoped**. Workloads in Virginia cannot privately address services in Frankfurt over Render’s internal network alone. Teams often fall back to public networking plus app-level auth.
 
-## Architecture (one glance)
+## Architecture
 
 ```
 [VA private net]                         [FRA private net]
@@ -47,20 +49,20 @@ Render private networking is **region-scoped**. Workloads in Virginia cannot pri
 ## Quick start
 
 ```powershell
+git checkout v1.0.0
 cargo test --workspace
 .\evaluate.ps1
 cargo run -p fabric-cli -- resolve payments.global.internal
-cargo run -p fabric-cli -- doctor
 ```
 
 ## Render fit
 
-Extends the same-region private network model with global names and authenticated fabric paths. **Not affiliated with Render.** Gap matrix: [`docs/RENDER_GAP_MATRIX.md`](./docs/RENDER_GAP_MATRIX.md).
+Extends the same-region private network model with global names and authenticated fabric paths. **Not affiliated with Render.** See [`docs/RENDER_GAP_MATRIX.md`](./docs/RENDER_GAP_MATRIX.md).
 
-## Acquisition notice
+## Acquisition
 
 Diligence: [`acquisition/`](./acquisition/). One-pager: [`ACQUISITION.md`](./ACQUISITION.md).  
-**No production use** until written commercial license or completed acquisition/asset transfer. Contact via [GitHub `@theworker02`](https://github.com/theworker02) — see [Contact page](https://theworker02.github.io/cross-region-private-networking/contact.html).
+**No production use** until written commercial license or completed acquisition/asset transfer.
 
 ## License
 

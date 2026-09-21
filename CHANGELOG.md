@@ -2,13 +2,15 @@
 
 ## [1.0.0] — 2026-09-21
 
+**FROZEN** acquisition candidate — see [`RELEASE_FREEZE.md`](./RELEASE_FREEZE.md). Subsequent work should be a new version.
+
 ### Added
 
 - Production-oriented **rustls mTLS** ingress (Fabric CA, WebPkiClientVerifier, TrustStore post-handshake)
 - Complete acquisition diligence tree under `acquisition/` (IP, SBOM, transfer, security, legal drafts)
 - Internal security assessment (`SECURITY_PENTEST_INTERNAL.md`) — not a third-party pen-test
-- Docs: QUICKSTART, CLI, SECURITY, LIVE_MULTI_REGION; polished site Pages for acquisition
-- `RELEASE_NOTES_v1.0.0.md`; readiness report updated for 1.0
+- Docs: QUICKSTART, CLI, SECURITY, LIVE_MULTI_REGION; polished GitHub Pages site (demo, about, Render target, contact, due diligence)
+- `RELEASE_NOTES_v1.0.0.md`, `RELEASE_FREEZE.md`; readiness report updated for 1.0
 
 ### Changed
 

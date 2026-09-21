@@ -10,7 +10,7 @@
 <body>
   <div class="wrap">
     <header class="site">
-      <a href="./"><img class="logo" src="assets/brand/logo.svg" alt="Fabric"/></a>
+      <a class="brand" href="./"><img class="logo" src="assets/brand/logo.svg" width="200" height="60" alt="Fabric"/></a>
       <nav class="site" aria-label="Primary">
         <a href="./">Home</a>
         <a href="demo.html">Demo</a>
@@ -22,14 +22,21 @@
     </header>
     <main>
       <h1>Security</h1>
-      <ul class="clean">
-        <li>Ed25519 identity + TrustStore</li>
-        <li>rustls mTLS (Fabric CA + WebPki + TrustStore)</li>
-        <li>CIDR allowlist + default-deny policy</li>
-        <li>Route advertisement security + quarantine</li>
-      </ul>
-      <p><a href="https://github.com/theworker02/cross-region-private-networking/blob/master/docs/THREAT_MODEL.md">Threat model</a>
-        · <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/acquisition/SECURITY_REVIEW.md">Security review</a></p>
+      <div class="panel">
+        <ul class="clean">
+          <li>Ed25519 identity + TrustStore admission / revocation</li>
+          <li>rustls mTLS (Fabric CA, WebPkiClientVerifier, TrustStore post-check)</li>
+          <li>CIDR allowlist + default-deny policy</li>
+          <li>Route advertisement security + quarantine forensics</li>
+        </ul>
+      </div>
+      <p>
+        <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/docs/THREAT_MODEL.md">Threat model</a>
+        ·
+        <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/acquisition/SECURITY_REVIEW.md">Security review</a>
+        ·
+        <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/acquisition/SECURITY_PENTEST_INTERNAL.md">Internal assessment</a>
+      </p>
     </main>
     <footer class="site">Not affiliated with Render®</footer>
   </div>

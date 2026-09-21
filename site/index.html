@@ -4,14 +4,15 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Fabric — Cross-Region Private Networking</title>
-  <meta name="description" content="Global identity-aware private fabric that extends Render’s same-region private networking. Independent project; not affiliated with Render."/>
+  <meta name="description" content="Global identity-aware private fabric that extends Render’s same-region private networking. Independent; not affiliated with Render. Proprietary — sale/acquisition only."/>
+  <link rel="canonical" href="https://theworker02.github.io/cross-region-private-networking/"/>
   <link rel="icon" href="assets/brand/favicon.svg"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <div class="wrap">
     <header class="site">
-      <a href="./"><img class="logo" src="assets/brand/logo.svg" alt="Fabric — Cross-Region Private Networking"/></a>
+      <a class="brand" href="./"><img class="logo" src="assets/brand/logo.svg" width="200" height="60" alt="Fabric — Cross-Region Private Networking"/></a>
       <nav class="site" aria-label="Primary">
         <a class="active" href="./">Home</a>
         <a href="demo.html">Demo</a>
@@ -24,16 +25,18 @@
 
     <main>
       <div class="badges">
-        <span class="badge">v1.0.0</span>
+        <span class="badge">v1.0.0 frozen</span>
         <span class="badge warn">Independent — not affiliated with Render</span>
-        <span class="badge dark">Proprietary — sale / acquisition only</span>
+        <span class="badge dark">Sale / acquisition only</span>
       </div>
+
       <h1>Extend Render private networking globally</h1>
       <p class="lead">
         Render already provides excellent <strong>same-region</strong> private networks.
-        Fabric adds cross-region names, rustls mTLS identity, and policy — preferring
-        <code>LOCAL_NATIVE</code> in-region and authenticated fabric paths only when crossing regions.
+        This fabric adds cross-region names, rustls mTLS identity, and policy —
+        preferring native private hostnames in-region, and authenticated fabric paths only when crossing regions.
       </p>
+
       <div class="cta">
         <a class="btn" href="demo.html">Live demo (SIMULATION)</a>
         <a class="btn ghost" href="due-diligence.html">Acquisition package</a>
@@ -42,28 +45,32 @@
 
       <div class="grid2">
         <div class="panel">
-          <h2 style="margin-top:0">Problem</h2>
-          <p>Private networking on Render is region-scoped. Virginia cannot privately address Frankfurt over Render’s internal network alone — teams often fall back to public + app auth.</p>
+          <h2>The problem</h2>
+          <p>Private networking on Render is region-scoped. A service in Virginia cannot privately address a peer in Frankfurt over Render’s internal network alone. Teams often fall back to public networking plus application auth.</p>
         </div>
         <div class="panel">
-          <h2 style="margin-top:0">Path classes</h2>
+          <h2>Path classes</h2>
           <ul class="clean">
             <li><code>LOCAL_NATIVE</code> — same region → Render private hostname</li>
             <li><code>FABRIC_DIRECT</code> — cross-region authenticated path</li>
-            <li><code>FABRIC_RELAYED</code> — via public fabric ingress (not Render private net)</li>
+            <li><code>FABRIC_RELAYED</code> — via fabric ingress (not Render private net)</li>
           </ul>
         </div>
       </div>
 
       <div class="panel">
-        <h2 style="margin-top:0">Acquisition notice</h2>
-        <p>v1.0.0 is an acquisition release. <strong>No production use, redistribution, or sublicensing</strong> until a written commercial license or completed acquisition/asset transfer. See the <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/LICENSE">LICENSE</a>.</p>
+        <h2>Acquisition notice</h2>
+        <p><strong>v1.0.0 is frozen</strong> as the acquisition-candidate baseline. There is <strong>no grant</strong> to use, copy, modify, distribute, sublicense, or deploy in production until a written commercial license or completed acquisition/asset transfer.</p>
+        <p><a href="https://github.com/theworker02/cross-region-private-networking/blob/master/LICENSE">LICENSE</a>
+          · <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/RELEASE_FREEZE.md">Release freeze</a>
+          · <a href="https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0">GitHub Release</a></p>
       </div>
     </main>
 
     <footer class="site">
-      © 2026 Rightsholder · <a href="https://github.com/theworker02/cross-region-private-networking">GitHub</a>
-      · Independent project; not affiliated with Render®.
+      © 2026 Rightsholder ·
+      <a href="https://github.com/theworker02/cross-region-private-networking">GitHub</a> ·
+      Independent project; not affiliated with Render®.
     </footer>
   </div>
 </body>

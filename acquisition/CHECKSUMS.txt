@@ -1,16 +1,13 @@
-# CHECKSUMS — v1.0.0
+﻿# SHA256 checksums — v1.0.0 freeze
 
-Generate after tagging:
+Generated: 2026-09-21
+Authoritative tag: v1.0.0
 
-```powershell
-Get-FileHash -Algorithm SHA256 LICENSE, README.md, Cargo.toml, acquisition/SBOM.json, RELEASE_NOTES_v1.0.0.md |
-  Format-Table -AutoSize
-```
-
-```bash
-sha256sum LICENSE README.md Cargo.toml acquisition/SBOM.json RELEASE_NOTES_v1.0.0.md
-```
-
-Authoritative tree: git annotated tag **`v1.0.0`**.
-
-Prior prep file `CHECKSUMS_v0.5.0.md` is superseded for current release purposes.
+f5314f3638571d687235473bf00638dc5331f43bf8b9f6a4bd1fc962750f7caf  LICENSE
+c9f9b0dd3b1940f995d00c90d63daf1844f4801df2d6a707776eef08f315b739  README.md
+731861101f995430f65057c85b65abfdb2768fae317c933648bf293d15d98a42  Cargo.toml
+9dd7dc7ecbd27ea5bfeac758134e39b1eda8b848b4d2650b6dbd61278f621e65  RELEASE_NOTES_v1.0.0.md
+ff5f7600fbf911dd0c01a82dc7a37a3cbc4efa0207f75291bb60d19dc4f08bef  RELEASE_FREEZE.md
+7e76996133b9eb5e2bdc09379934a17d39e346c06bafaab7eefc190cba7bffee  ACQUISITION_READINESS_REPORT.md
+7eeec27009039981f802861c4b8122a1f154420818e60434f351046a6256904e  acquisition/SBOM.json
+cd4025cad414f64fae0c787e0abdaa0f4addcbdb113ae05f6a5adca6e8312da6  acquisition/TRANSFER_INVENTORY.json

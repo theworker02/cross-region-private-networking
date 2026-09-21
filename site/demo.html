@@ -4,26 +4,15 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Live demo (SIMULATION) — Fabric</title>
+  <meta name="description" content="Deterministic client-side fabric simulation. Not real Render infrastructure."/>
+  <link rel="canonical" href="https://theworker02.github.io/cross-region-private-networking/demo.html"/>
   <link rel="icon" href="assets/brand/favicon.svg"/>
   <link rel="stylesheet" href="styles.css"/>
-  <style>
-    canvas#fabric {
-      width: 100%; height: auto; display: block; border-radius: 10px;
-      background: #0b1f2a; box-shadow: 0 8px 28px rgba(11,31,42,0.25);
-    }
-    .controls { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.85rem 0; }
-    .controls button {
-      padding: 0.45rem 0.75rem; border: 0; border-radius: 6px;
-      background: var(--accent); color: #fff; font-weight: 700; cursor: pointer;
-    }
-    .controls button.secondary { background: var(--ink); }
-    .controls button:disabled { opacity: 0.45; cursor: not-allowed; }
-  </style>
 </head>
 <body>
   <div class="wrap">
     <header class="site">
-      <a href="./"><img class="logo" src="assets/brand/logo.svg" alt="Fabric"/></a>
+      <a class="brand" href="./"><img class="logo" src="assets/brand/logo.svg" width="200" height="60" alt="Fabric"/></a>
       <nav class="site" aria-label="Primary">
         <a href="./">Home</a>
         <a class="active" href="demo.html">Demo</a>
@@ -38,28 +27,35 @@
       <div class="badges">
         <span class="badge sim">SIMULATION</span>
         <span class="badge warn">Not real Render infrastructure</span>
-        <span class="badge">Deterministic client-side</span>
+        <span class="badge outline">Deterministic · client-side</span>
       </div>
+
       <h1>Live fabric demo</h1>
       <p class="lead">
-        Interactive VA ↔ FRA path simulation. Receipts are labeled <strong>SIMULATION</strong>.
-        This does <em>not</em> call Render APIs or prove live multi-region private networking.
+        Interactive Virginia ↔ Frankfurt path model. Every receipt is labeled <strong>SIMULATION</strong>.
+        This page does not call Render APIs and does not prove live multi-region private networking.
       </p>
+      <p class="notice">Prefer <code>LOCAL_NATIVE</code> for same-region traffic. Cross-region underlay is authenticated Internet transit — <em>not</em> Render private networking.</p>
 
-      <canvas id="fabric" width="900" height="280" role="img" aria-label="Fabric topology canvas"></canvas>
+      <canvas id="fabric" width="900" height="280" role="img" aria-label="Fabric topology: VA and FRA nodes"></canvas>
+
       <div class="controls">
         <button type="button" data-act="reset">Reset</button>
         <button type="button" data-act="resolve">Resolve payments.global.internal</button>
-        <button type="button" class="secondary" data-act="break">Break cross-region link</button>
-        <button type="button" class="secondary" data-act="kill">Kill FRA node</button>
+        <button type="button" class="secondary" data-act="break">Break link</button>
+        <button type="button" class="secondary" data-act="kill">Kill FRA</button>
         <button type="button" class="secondary" data-act="revoke">Revoke peer</button>
         <button type="button" class="secondary" data-act="latency">Inject latency</button>
         <button type="button" class="secondary" data-act="policy">Policy allow</button>
         <button type="button" class="secondary" data-act="local">Same-region LOCAL_NATIVE</button>
       </div>
       <pre class="out" id="log" aria-live="polite"></pre>
-      <p><a href="https://github.com/theworker02/cross-region-private-networking/blob/master/docs/ACQUISITION_DEMO.md">Acquisition demo script (repo)</a>
-        · <a href="render.html">Why Render</a></p>
+
+      <p style="margin-top:1.25rem;font-size:0.9rem">
+        <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/docs/ACQUISITION_DEMO.md">Acquisition demo script</a>
+        · <a href="render.html">Why Render</a>
+        · <a href="due-diligence.html">Diligence</a>
+      </p>
     </main>
 
     <footer class="site">
@@ -69,79 +65,66 @@
   </div>
   <script>
 (function () {
-  const SEED = 20260921;
+  var SEED = 20260921;
   function mulberry32(a) {
     return function () {
-      let t = (a += 0x6d2b79f5);
+      var t = (a += 0x6d2b79f5);
       t = Math.imul(t ^ (t >>> 15), t | 1);
       t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
       return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
     };
   }
-  const rand = mulberry32(SEED);
-  const baseRtt = 88 + Math.floor(rand() * 8); // deterministic ~88–95
+  var rand = mulberry32(SEED);
+  var baseRtt = 88 + Math.floor(rand() * 8);
+  var state = { link: true, fra: true, revoked: false, rtt: baseRtt, lastPath: "FABRIC_RELAYED", tick: 0 };
+  var logEl = document.getElementById("log");
+  var lines = [];
 
-  const state = {
-    link: true,
-    fra: true,
-    revoked: false,
-    rtt: baseRtt,
-    lastPath: "FABRIC_RELAYED",
-    tick: 0,
-  };
-  const logEl = document.getElementById("log");
-  const lines = [];
   function log(msg) {
-    const ts = "T+" + String(state.tick).padStart(3, "0");
+    var ts = "T+" + String(state.tick).padStart(3, "0");
     lines.unshift("[" + ts + "][SIMULATION] " + msg);
-    if (lines.length > 14) lines.pop();
+    if (lines.length > 12) lines.pop();
     logEl.textContent = lines.join("\n");
   }
-
-  function pathOk() {
-    return state.link && state.fra && !state.revoked;
-  }
+  function pathOk() { return state.link && state.fra && !state.revoked; }
 
   function draw() {
-    const c = document.getElementById("fabric");
-    const x = c.getContext("2d");
-    const w = c.width, h = c.height;
+    var c = document.getElementById("fabric");
+    var x = c.getContext("2d");
+    var w = c.width, h = c.height;
     x.clearRect(0, 0, w, h);
-    x.fillStyle = "#0b1f2a";
+    x.fillStyle = "#0c1c24";
     x.fillRect(0, 0, w, h);
 
-    // regions
     function node(cx, cy, label, ok) {
       x.beginPath();
-      x.arc(cx, cy, 36, 0, Math.PI * 2);
-      x.fillStyle = ok ? "#1f7a6b" : "#553333";
+      x.arc(cx, cy, 34, 0, Math.PI * 2);
+      x.fillStyle = ok ? "#1a6b5c" : "#4a3030";
       x.fill();
-      x.fillStyle = "#eef5f3";
-      x.font = "600 14px Segoe UI, sans-serif";
+      x.fillStyle = "#f7faf9";
+      x.font = "600 13px Segoe UI, sans-serif";
       x.textAlign = "center";
-      x.fillText(label, cx, cy + 5);
+      x.fillText(label, cx, cy + 4);
     }
-    node(140, 150, "VA", true);
-    node(760, 150, "FRA", state.fra);
+    node(150, 155, "VA", true);
+    node(750, 155, "FRA", state.fra);
 
-    // link
-    x.lineWidth = 5;
-    x.strokeStyle = pathOk() ? "#1f7a6b" : "#a04444";
-    x.setLineDash(pathOk() ? [] : [10, 8]);
+    x.lineWidth = 4;
+    x.strokeStyle = pathOk() ? "#1a6b5c" : "#a05050";
+    x.setLineDash(pathOk() ? [] : [8, 7]);
     x.beginPath();
-    x.moveTo(176, 150);
-    x.lineTo(724, 150);
+    x.moveTo(184, 155);
+    x.lineTo(716, 155);
     x.stroke();
     x.setLineDash([]);
 
-    x.fillStyle = "#d7efe9";
-    x.font = "13px Cascadia Code, Consolas, monospace";
+    x.fillStyle = "#d4ebe4";
+    x.font = "12px Cascadia Code, Consolas, monospace";
     x.textAlign = "center";
-    const label = pathOk()
+    x.fillText(pathOk()
       ? state.lastPath + "  ~" + state.rtt + "ms  (underlay ≠ Render private net)"
-      : "PATH DOWN — resolve fails / failover";
-    x.fillText(label, w / 2, 58);
-    x.fillText("payments.global.internal", w / 2, 82);
+      : "PATH DOWN — resolve fails", w / 2, 56);
+    x.fillText("payments.global.internal", w / 2, 78);
   }
 
   function act(kind) {
@@ -151,26 +134,27 @@
       state.rtt = baseRtt; state.lastPath = "FABRIC_RELAYED";
       log("reset — healthy FABRIC_RELAYED path VA→FRA");
     } else if (kind === "resolve") {
-      if (!pathOk()) log("RESOLVE FAIL payments.global.internal — path unhealthy");
-      else log("RESOLVE OK payments.global.internal → FRA via " + state.lastPath + " rtt≈" + state.rtt + "ms");
+      log(pathOk()
+        ? "RESOLVE OK payments.global.internal → FRA via " + state.lastPath + " rtt≈" + state.rtt + "ms"
+        : "RESOLVE FAIL payments.global.internal — path unhealthy");
     } else if (kind === "break") {
       state.link = false;
-      log("cross-region fabric link broken (SIMULATION)");
+      log("cross-region fabric link broken");
     } else if (kind === "kill") {
       state.fra = false;
-      log("FRA fabric node killed — quarantine eligibility (SIMULATION)");
+      log("FRA fabric node killed");
     } else if (kind === "revoke") {
       state.revoked = true;
-      log("peer identity revoked — TrustStore deny (SIMULATION)");
+      log("peer identity revoked — TrustStore deny");
     } else if (kind === "latency") {
       state.rtt = baseRtt + 310;
-      log("latency injected — rtt≈" + state.rtt + "ms (SIMULATION)");
+      log("latency injected — rtt≈" + state.rtt + "ms");
     } else if (kind === "policy") {
       log("policy ALLOW checkout.virginia → payments.frankfurt (default-deny elsewhere)");
     } else if (kind === "local") {
       state.lastPath = "LOCAL_NATIVE";
       state.rtt = 2 + Math.floor(rand() * 3);
-      log("same-region prefer LOCAL_NATIVE → Render private hostname (in-region only)");
+      log("same-region prefer LOCAL_NATIVE → Render private hostname");
     }
     draw();
   }
