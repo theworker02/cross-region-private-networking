@@ -1,8 +1,8 @@
 # Product Specification — Cross-Region Private Networking
 
-**Status:** Vision / specification (implementation may be incomplete or absent in-repo)  
+**Status:** v1.0.0 implementation frozen; v1.1.0 diligence package expanded — see `acquisition/` and `RELEASE_FREEZE.md`  
 **Audience:** Buyers, licensees, future implementers  
-**Related:** `ARCHITECTURE.md`, `THREAT_MODEL.md`, `DEMO.md`, `ROADMAP.md`
+**Related:** `ARCHITECTURE.md`, `THREAT_MODEL.md`, `DEMO.md`, `ROADMAP.md`, `../acquisition/PRODUCT_BRIEF.md`
 
 ---
 

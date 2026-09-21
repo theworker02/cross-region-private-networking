@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.0] — 2026-09-21
+
+### Added
+
+- Substantial **acquisition diligence data room** expansion (product brief, ICP, competitive landscape, Render insertion points, evaluation guide, threat summary, brand guide, open questions)
+- Legal-review draft checklists: IP assignment, contributor requirements, asset/trademark transfer, license transition (**NOT EXECUTED**)
+- `RELEASE_NOTES_v1.1.0.md`; richer `acquisition/README.md` navigation
+- Site Due diligence / About / Target pages link into expanded package
+
+### Changed
+
+- Workspace version **1.1.0** (documentation/diligence release; **v1.0.0 implementation freeze preserved**)
+- Root `ACQUISITION.md` + `ACQUISITION_READINESS_REPORT.md` updated for 1.1 package narrative
+
+### Note
+
+Does not rewrite v1.0.0 release history. Live multi-region and external pen-test disclosures unchanged.
+
 ## [1.0.0] — 2026-09-21
 
 **FROZEN** acquisition candidate — see [`RELEASE_FREEZE.md`](./RELEASE_FREEZE.md). Subsequent work should be a new version.

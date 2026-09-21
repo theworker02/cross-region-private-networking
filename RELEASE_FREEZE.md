@@ -36,6 +36,10 @@ Independent project; **not affiliated with Render**.
 
 No use, copy, modify, distribute, sublicense, or production deploy until written commercial license or completed acquisition/asset transfer. See [`LICENSE`](./LICENSE).
 
+## Later versions
+
+**v1.1.0** expands the diligence data room and documentation. It does **not** un-freeze or rewrite this v1.0.0 implementation baseline. See [`RELEASE_NOTES_v1.1.0.md`](./RELEASE_NOTES_v1.1.0.md).
+
 ## Verify
 
 ```text

@@ -1,4 +1,4 @@
-# Documentation index — v1.0.0
+# Documentation index
 
 | Doc | Topic |
 |-----|--------|
@@ -24,5 +24,12 @@
 | [ACQUISITION_DEMO.md](./ACQUISITION_DEMO.md) | Acquisition demo |
 | [LIVE_MULTI_REGION.md](./LIVE_MULTI_REGION.md) | Live MR status |
 | [audit/PHASE4_BASELINE.md](./audit/PHASE4_BASELINE.md) | Audit notes |
+
+## Diligence data room
+
+Expanded package (v1.1.0): [`../acquisition/README.md`](../acquisition/README.md)  
+Buyer evaluation: [`../acquisition/EVALUATION_GUIDE.md`](../acquisition/EVALUATION_GUIDE.md)  
+Threat summary: [`../acquisition/THREAT_MODEL_SUMMARY.md`](../acquisition/THREAT_MODEL_SUMMARY.md)  
+Render insertion: [`../acquisition/RENDER_INSERTION_POINTS.md`](../acquisition/RENDER_INSERTION_POINTS.md)
 
 Independent project; not affiliated with Render. License: proprietary sale/acquisition only.

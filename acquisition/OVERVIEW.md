@@ -1,24 +1,28 @@
-# Acquisition package overview — v1.0.0 (frozen)
+# Acquisition package overview — v1.1.0
 
 **Product:** Cross-Region Private Networking  
+**Diligence package:** 1.1.0  
+**Implementation baseline:** v1.0.0 frozen  
 **Readiness:** READY_WITH_DISCLOSED_ITEMS  
 **License:** Proprietary — sale / acquisition only ([`../LICENSE`](../LICENSE))  
-**Independence:** Not affiliated with Render
+**Independence:** Not affiliated with Render  
 
 ## One sentence
 
-A Rust identity-aware fabric that prefers Render same-region private networking in-region and provides authenticated cross-region names, mTLS, and policy — packaged for acquisition diligence.
+A Rust identity-aware fabric that prefers Render same-region private networking in-region and provides authenticated cross-region names, mTLS, and policy — packaged as an expanded M&A diligence data room.
 
-## Start
+## Data room map
+
+See the navigation table in [`README.md`](./README.md).
+
+## Start here
 
 1. [`EXECUTIVE_SUMMARY.md`](./EXECUTIVE_SUMMARY.md)  
-2. [`../ACQUISITION_READINESS_REPORT.md`](../ACQUISITION_READINESS_REPORT.md)  
-3. [`../RELEASE_FREEZE.md`](../RELEASE_FREEZE.md)  
-4. [`TECHNICAL_DUE_DILIGENCE.md`](./TECHNICAL_DUE_DILIGENCE.md)  
-5. [`BUYER_FAQ.md`](./BUYER_FAQ.md)
-
-Full index: [`README.md`](./README.md).
+2. [`PRODUCT_BRIEF.md`](./PRODUCT_BRIEF.md)  
+3. [`../ACQUISITION_READINESS_REPORT.md`](../ACQUISITION_READINESS_REPORT.md)  
+4. [`EVALUATION_GUIDE.md`](./EVALUATION_GUIDE.md)  
+5. [`BUYER_FAQ.md`](./BUYER_FAQ.md)  
 
 ## Contact
 
-GitHub [@theworker02](https://github.com/theworker02) — see [Contact page](https://theworker02.github.io/cross-region-private-networking/contact.html).
+GitHub [@theworker02](https://github.com/theworker02) · [Contact page](https://theworker02.github.io/cross-region-private-networking/contact.html)

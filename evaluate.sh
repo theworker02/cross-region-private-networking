@@ -6,7 +6,7 @@ cd "$ROOT"
 mkdir -p evaluation fuzz/crashes
 
 echo "== fabric evaluate ==" | tee evaluation/SUMMARY.md
-echo "version: 1.0.0" | tee -a evaluation/SUMMARY.md
+echo "version: 1.1.0" | tee -a evaluation/SUMMARY.md
 echo "started: $(date -u +%Y-%m-%dT%H:%M:%SZ)" | tee -a evaluation/SUMMARY.md
 
 cargo test --workspace 2>&1 | tee evaluation/test_output.txt

@@ -6,7 +6,7 @@ New-Item -ItemType Directory -Force -Path evaluation, fuzz/crashes | Out-Null
 
 $summary = New-Object System.Collections.Generic.List[string]
 $summary.Add("== fabric evaluate ==")
-$summary.Add("version: 1.0.0")
+$summary.Add("version: 1.1.0")
 $summary.Add("started: $((Get-Date).ToUniversalTime().ToString('o'))")
 
 Write-Host "Running cargo test..."

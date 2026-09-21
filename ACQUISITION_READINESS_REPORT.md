@@ -1,7 +1,8 @@
 # Acquisition readiness report
 
 **Product:** Cross-Region Private Networking  
-**Version:** 1.0.0  
+**Diligence package version:** 1.1.0  
+**Implementation baseline:** v1.0.0 (frozen)  
 **Date:** 2026-09-21
 
 ## Category: READY_WITH_DISCLOSED_ITEMS
@@ -10,17 +11,21 @@
 
 | Evidence | Path / command |
 |----------|----------------|
-| Automated tests | `cargo test --workspace` |
+| Frozen implementation tag | `v1.0.0` |
+| Expanded diligence room | `acquisition/` (v1.1.0 materials) |
+| Automated tests | `cargo test --workspace` (78 passed on baseline) |
 | rustls mTLS | `mtls::tests::*` VERIFIED |
-| Evaluate bundle | `.\evaluate.ps1` / `./evaluate.sh` → `evaluation/` |
-| Gap matrix cited | `docs/RENDER_GAP_MATRIX.md` |
+| Evaluate bundle | `.\evaluate.ps1` / `./evaluate.sh` |
+| Gap matrix | `docs/RENDER_GAP_MATRIX.md` + `acquisition/RENDER_GAP_MATRIX.md` |
+| Integration / insertion | `acquisition/RENDER_INTEGRATION_PLAN.md`, `RENDER_INSERTION_POINTS.md` |
 | Security review | `acquisition/SECURITY_REVIEW.md` |
 | Internal assessment | `acquisition/SECURITY_PENTEST_INTERNAL.md` |
-| SBOM (no UNKNOWN) | `acquisition/SBOM.json` |
+| Threat summary | `acquisition/THREAT_MODEL_SUMMARY.md` |
+| SBOM | `acquisition/SBOM.json` |
 | Transfer inventory | `acquisition/TRANSFER_INVENTORY.json` |
-| Demo script | `docs/ACQUISITION_DEMO.md` |
-| Release notes | `RELEASE_NOTES_v1.0.0.md` |
+| Evaluation guide | `acquisition/EVALUATION_GUIDE.md` |
 | License | Sale/acquisition-only `LICENSE` |
+| Pages | https://theworker02.github.io/cross-region-private-networking/ |
 
 ### Disclosed items (not blockers for diligence conversation)
 
@@ -29,9 +34,10 @@
 3. No patents/trademarks/executed transfer agreements in-repo (drafts only — marked NOT EXECUTED)  
 4. Example IP allowlist CIDRs are not official Render ranges  
 
-### Closed since 0.5.0 candidate
+### Version narrative
 
-- Production-oriented rustls mTLS terminator path (was OPEN) → **VERIFIED** in 1.0.0
+- **v1.0.0** — frozen acquisition-candidate implementation + initial package  
+- **v1.1.0** — substantial expansion of diligence data room, docs cross-links, and site substance — does **not** rewrite v1.0.0 history  
 
 ### Explicitly out of scope
 
@@ -43,4 +49,4 @@ README and gap matrix state Render’s same-region private networking positively
 
 ### Recommendation
 
-Suitable for **technical acquisition diligence** at **v1.0.0** with the disclosed items above. Not a claim of completed production multi-tenant rollout on Render.
+Suitable for **technical acquisition diligence** with the disclosed items above. Expanded `acquisition/` is intended as a serious data-room index; still not a claim of completed production multi-tenant rollout on Render.

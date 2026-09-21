@@ -1,11 +1,13 @@
 # CONFIDENTIAL — Acquisition One-Pager Package
 
 **Product (working title):** Cross-Region Private Networking / Render-native encrypted service fabric  
-**Version:** 1.0.0 acquisition release  
-**Status:** Finished diligence package + Rust implementation — see `ACQUISITION_READINESS_REPORT.md`  
+**Diligence package:** 1.1.0 (expanded data room)  
+**Implementation baseline:** v1.0.0 frozen  
+**Status:** Acquisition-ready implementation + expanded diligence room — see `ACQUISITION_READINESS_REPORT.md`  
 **Classification:** CONFIDENTIAL — for qualified buyers under NDA only  
 **Copyright:** © 2026 [Rightsholder — e.g. theworker02 / legal entity name]  
 **Independence:** Independent project; **not affiliated with Render.**
+**Contact:** [GitHub @theworker02](https://github.com/theworker02)
 
 > **Notice:** Provided for acquisition and commercial-license discussions. **No production use** under root `LICENSE` until a written commercial license or completed acquisition/asset transfer. Not investment advice. Do not redistribute outside your deal team without written permission. See `LICENSE`, `TRADE_SECRETS.md`, `NOTICE.md`, and `acquisition/`.
 
@@ -19,7 +21,9 @@ This product concept is a **Render-native encrypted service fabric**: fabric nod
 
 **What a buyer gets:** concept IP, architecture and threat models, product specifications, demo narrative, diligence materials, and (as developed) any associated code, configs, and operational artifacts — subject to a definitive agreement.
 
-**What a buyer should assume today:** v1.0.0 is an acquisition-ready implementation with SIMULATED multi-region drills and disclosed gaps (live multi-region not executed; no external pen-test). Do not treat this package as evidence of production customers, filed patents, or recurring revenue unless separately verified in diligence.
+**What a buyer should assume today:** **v1.0.0** freezes the acquisition-candidate implementation. **v1.1.0** expands the diligence data room, docs, and site. SIMULATED multi-region drills and disclosed gaps remain (live multi-region not executed; no external pen-test). Do not treat this package as evidence of production customers, filed patents, or recurring revenue unless separately verified in diligence.
+
+**Navigate the data room:** start at [`acquisition/README.md`](./acquisition/README.md) (orientation → market → integration → technical DD → IP → transfer → legal drafts).
 
 ---
 
@@ -204,8 +208,12 @@ Summary: architecture choices, unpublished protocols, customer conversations, pr
 | Document | Purpose |
 |----------|---------|
 | `LICENSE` | Proprietary — no use/copy/modify/distribute/sublicense/production deploy until commercial license or acquisition |
-| `acquisition/` | Full diligence tree (IP, SBOM, security, transfer, legal drafts) |
-| `RELEASE_NOTES_v1.0.0.md` | v1.0.0 release notes |
+| `acquisition/` | Expanded diligence data room (v1.1.0) — start at `acquisition/README.md` |
+| `acquisition/PRODUCT_BRIEF.md` | Product brief for acquirer eng/product |
+| `acquisition/MARKET_AND_ICP.md` | ICP / complementary framing |
+| `acquisition/EVALUATION_GUIDE.md` | How to verify |
+| `RELEASE_FREEZE.md` | v1.0.0 freeze notice |
+| `RELEASE_NOTES_v1.0.0.md` / `RELEASE_NOTES_v1.1.0.md` | Release notes |
 | `README.md` | Product overview & status |
 | `SECURITY.md` | Vulnerability reporting |
 | `NOTICE.md` | Copyright & trademarks |
@@ -225,4 +233,4 @@ This package is **CONFIDENTIAL** and informational. It does not create a binding
 
 ---
 
-*Document version: 1.0.0 / 2026-09-21 · Classification: CONFIDENTIAL*
+*Document version: 1.1.0 / 2026-09-21 · Classification: CONFIDENTIAL*

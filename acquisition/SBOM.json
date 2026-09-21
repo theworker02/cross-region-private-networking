@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "generated": "2026-09-21",
   "method": "manual_review_of_Cargo.toml_direct_deps",
   "dependencies": [

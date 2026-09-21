@@ -1,56 +1,44 @@
-# Acquisition package index
+# Acquisition package index — v1.1.0
 
 **Product:** Cross-Region Private Networking  
-**Package version:** 1.0.0 (**FROZEN** — [`../RELEASE_FREEZE.md`](../RELEASE_FREEZE.md))  
-**Classification:** CONFIDENTIAL — qualified buyers under NDA where required  
+**Package version:** **1.1.0** (diligence / documentation expansion)  
+**Code baseline:** v1.0.0 freeze remains the acquisition-candidate implementation tag — see [`../RELEASE_FREEZE.md`](../RELEASE_FREEZE.md)  
+**Classification:** CONFIDENTIAL for deal-team use beyond public materials  
 **License:** Proprietary — no production use until written commercial license or completed acquisition ([`../LICENSE`](../LICENSE))  
 **Contact:** [GitHub @theworker02](https://github.com/theworker02) · [Contact page](https://theworker02.github.io/cross-region-private-networking/contact.html)
 
 > **Independent project; not affiliated with Render.**
 
-## How to use this folder
+## How to navigate (recommended order)
 
-1. Read [`EXECUTIVE_SUMMARY.md`](./EXECUTIVE_SUMMARY.md) and root [`../ACQUISITION.md`](../ACQUISITION.md).  
-2. Technical diligence: [`TECHNICAL_DUE_DILIGENCE.md`](./TECHNICAL_DUE_DILIGENCE.md) + [`BUILD_REPRODUCIBILITY.md`](./BUILD_REPRODUCIBILITY.md).  
-3. IP / assets: [`IP_MANIFEST.md`](./IP_MANIFEST.md), [`ASSET_REGISTER.md`](./ASSET_REGISTER.md), [`PROVENANCE.md`](./PROVENANCE.md).  
-4. Security: [`SECURITY_REVIEW.md`](./SECURITY_REVIEW.md), [`SECURITY_PENTEST_INTERNAL.md`](./SECURITY_PENTEST_INTERNAL.md), [`SECURITY_DISCLOSURE.md`](./SECURITY_DISCLOSURE.md).  
-5. Transfer: [`TRANSFER_CHECKLIST.md`](./TRANSFER_CHECKLIST.md), [`TRANSFER_INVENTORY.json`](./TRANSFER_INVENTORY.json), [`POST_TRANSFER_OPERATIONS.md`](./POST_TRANSFER_OPERATIONS.md).  
-6. Legal drafts only: [`legal-review/`](./legal-review/) — **DRAFT FOR PROFESSIONAL LEGAL REVIEW — NOT EXECUTED**.
+| Phase | Audience | Documents |
+|-------|----------|-----------|
+| 1. Orientation | Exec / corp-dev | [`EXECUTIVE_SUMMARY.md`](./EXECUTIVE_SUMMARY.md), [`OVERVIEW.md`](./OVERVIEW.md), [`PRODUCT_BRIEF.md`](./PRODUCT_BRIEF.md) |
+| 2. Why / market | Strategy | [`MARKET_AND_ICP.md`](./MARKET_AND_ICP.md), [`COMPETITIVE_LANDSCAPE.md`](./COMPETITIVE_LANDSCAPE.md), [`RENDER_GAP_MATRIX.md`](./RENDER_GAP_MATRIX.md) |
+| 3. Integration | Eng / platform | [`RENDER_INTEGRATION_PLAN.md`](./RENDER_INTEGRATION_PLAN.md), [`RENDER_INSERTION_POINTS.md`](./RENDER_INSERTION_POINTS.md) |
+| 4. Technical DD | Eng / security | [`TECHNICAL_DUE_DILIGENCE.md`](./TECHNICAL_DUE_DILIGENCE.md), [`PROTOCOL_IP_INVENTORY.md`](./PROTOCOL_IP_INVENTORY.md), [`THREAT_MODEL_SUMMARY.md`](./THREAT_MODEL_SUMMARY.md), [`SECURITY_REVIEW.md`](./SECURITY_REVIEW.md) |
+| 5. IP & assets | Legal / IP | [`IP_MANIFEST.md`](./IP_MANIFEST.md), [`ASSET_REGISTER.md`](./ASSET_REGISTER.md), [`PROVENANCE.md`](./PROVENANCE.md), [`CONTRIBUTOR_RECORD.md`](./CONTRIBUTOR_RECORD.md) |
+| 6. Supply chain | Legal / AppSec | [`DEPENDENCY_LICENSES.md`](./DEPENDENCY_LICENSES.md), [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md), [`SBOM.json`](./SBOM.json) |
+| 7. Brand / ops | Ops / brand | [`TRADEMARKS.md`](./TRADEMARKS.md), [`BRAND_GUIDE.md`](./BRAND_GUIDE.md), [`DOMAIN_AND_ACCOUNTS.md`](./DOMAIN_AND_ACCOUNTS.md) |
+| 8. Transfer | Deal ops | [`TRANSFER_CHECKLIST.md`](./TRANSFER_CHECKLIST.md), [`POST_TRANSFER_OPERATIONS.md`](./POST_TRANSFER_OPERATIONS.md), [`SECRETS_HANDOFF_CHECKLIST.md`](./SECRETS_HANDOFF_CHECKLIST.md), [`TRANSFER_INVENTORY.json`](./TRANSFER_INVENTORY.json) |
+| 9. Evaluation | Eng | [`EVALUATION_GUIDE.md`](./EVALUATION_GUIDE.md), [`DEMO_SCRIPT.md`](./DEMO_SCRIPT.md), [`BUILD_REPRODUCIBILITY.md`](./BUILD_REPRODUCIBILITY.md) |
+| 10. Legal drafts | Counsel only | [`legal-review/`](./legal-review/) — **DRAFT — NOT EXECUTED** |
+| 11. Open items | All | [`KNOWN_LIABILITIES.md`](./KNOWN_LIABILITIES.md), [`OPEN_QUESTIONS.md`](./OPEN_QUESTIONS.md), [`BUYER_FAQ.md`](./BUYER_FAQ.md) |
 
-## File map
+## Version relationship
 
-| File | Purpose |
-|------|---------|
-| `EXECUTIVE_SUMMARY.md` | Buyer-facing one-screen summary |
-| `BUYER_FAQ.md` | Diligence Q&A |
-| `DEMO_SCRIPT.md` | How to run SIMULATED demo |
-| `OVERVIEW.md` | Package overview |
-| `IP_MANIFEST.md` | IP included / excluded |
-| `ASSET_REGISTER.md` | Tangible & intangible assets |
-| `PROVENANCE.md` | Authorship & origin |
-| `CONTRIBUTOR_RECORD.md` | Contributors / assignment posture |
-| `DEPENDENCY_LICENSES.md` | Direct dependency licenses |
-| `THIRD_PARTY_NOTICES.md` | Attribution notices (package copy) |
-| `SBOM.json` | Software bill of materials |
-| `TRADEMARKS.md` | Marks status (honest) |
-| `DOMAIN_AND_ACCOUNTS.md` | Domains / accounts handoff |
-| `SECRETS_HANDOFF_CHECKLIST.md` | Credential rotation checklist |
-| `BUILD_REPRODUCIBILITY.md` | How to rebuild & verify |
-| `TECHNICAL_DUE_DILIGENCE.md` | What exists in code |
-| `SECURITY_DISCLOSURE.md` | Known issues / reporting |
-| `KNOWN_LIABILITIES.md` | Disclosed liabilities |
-| `TRANSFER_CHECKLIST.md` | Closing checklist |
-| `POST_TRANSFER_OPERATIONS.md` | Day-2 ops for buyer |
-| `SECURITY_REVIEW.md` | Itemized security status |
-| `SECURITY_PENTEST_INTERNAL.md` | Internal assessment (not third-party) |
-| `RENDER_INTEGRATION_PLAN.md` | Render fit & plan |
-| `PROTOCOL_IP_INVENTORY.md` | Protocol-level IP notes |
-| `IP_STATUS.md` | Legacy short IP status (superseded detail in IP_MANIFEST) |
-| `DEPENDENCIES.md` | Legacy deps summary → see DEPENDENCY_LICENSES |
-| `TRANSFER_INVENTORY.json` | Machine-readable inventory |
-| `CHECKSUMS.txt` | Release artifact checksums guidance |
-| `legal-review/` | Draft instruments only |
+| Tag | Role |
+|-----|------|
+| **v1.0.0** | Frozen acquisition-candidate **implementation** baseline |
+| **v1.1.0** | Expanded diligence data room, docs, and site (this package) |
 
-Root companions: [`../ACQUISITION_READINESS_REPORT.md`](../ACQUISITION_READINESS_REPORT.md), [`../RELEASE_NOTES_v1.0.0.md`](../RELEASE_NOTES_v1.0.0.md).
+Do not treat 1.1.0 as rewriting 1.0.0 history — new release, additive materials.
 
-Contact placeholders: `[CONTACT_EMAIL]` in root `ACQUISITION.md`.
+## Honesty banner
+
+- Live multi-region: **NOT EXECUTED — INFRASTRUCTURE UNAVAILABLE**  
+- No third-party pen-test  
+- No executed legal instruments in-repo  
+- No claimed ARR, customers, or patents unless separately evidenced  
+
+Root companions: [`../ACQUISITION.md`](../ACQUISITION.md), [`../ACQUISITION_READINESS_REPORT.md`](../ACQUISITION_READINESS_REPORT.md), [`../RELEASE_NOTES_v1.1.0.md`](../RELEASE_NOTES_v1.1.0.md).

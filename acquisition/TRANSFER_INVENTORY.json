@@ -1,9 +1,10 @@
 {
-  "package_version": "1.0.0",
+  "package_version": "1.1.0",
+  "implementation_baseline": "1.0.0",
   "generated": "2026-09-21",
   "product": "Cross-Region Private Networking",
   "license": "LicenseRef-Proprietary",
-  "tag": "v1.0.0",
+  "tags": ["v1.0.0", "v1.1.0"],
   "includes": [
     "crates/fabric-core",
     "crates/fabric-cli",
@@ -20,7 +21,25 @@
     "README.md",
     "ACQUISITION.md",
     "ACQUISITION_READINESS_REPORT.md",
-    "RELEASE_NOTES_v1.0.0.md"
+    "RELEASE_NOTES_v1.0.0.md",
+    "RELEASE_NOTES_v1.1.0.md",
+    "RELEASE_FREEZE.md"
+  ],
+  "acquisition_expansion_v1_1": [
+    "PRODUCT_BRIEF.md",
+    "MARKET_AND_ICP.md",
+    "COMPETITIVE_LANDSCAPE.md",
+    "RENDER_GAP_MATRIX.md",
+    "RENDER_INSERTION_POINTS.md",
+    "THREAT_MODEL_SUMMARY.md",
+    "EVALUATION_GUIDE.md",
+    "BRAND_GUIDE.md",
+    "OPEN_QUESTIONS.md",
+    "legal-review/IP_ASSIGNMENT_CHECKLIST.md",
+    "legal-review/CONTRIBUTOR_ASSIGNMENT_REQUIREMENTS.md",
+    "legal-review/ASSET_TRANSFER_CHECKLIST.md",
+    "legal-review/TRADEMARK_TRANSFER_CHECKLIST.md",
+    "legal-review/LICENSE_TRANSITION_NOTES.md"
   ],
   "excludes": [
     "target/",

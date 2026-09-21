@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0"><img alt="version" src="https://img.shields.io/badge/version-1.0.0-1F7A6B"/></a>
-  <a href="https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0"><img alt="freeze" src="https://img.shields.io/badge/release-frozen-0B1F2A"/></a>
+  <a href="https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.1.0"><img alt="version" src="https://img.shields.io/badge/version-1.1.0-1F7A6B"/></a>
+  <a href="https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0"><img alt="freeze" src="https://img.shields.io/badge/code%20baseline-v1.0.0%20frozen-0B1F2A"/></a>
   <a href="https://github.com/theworker02/cross-region-private-networking/actions/workflows/pages.yml"><img alt="pages" src="https://img.shields.io/github/actions/workflow/status/theworker02/cross-region-private-networking/pages.yml?branch=master&label=Pages"/></a>
   <img alt="tests" src="https://img.shields.io/badge/tests-78%20passed-1F7A6B"/>
   <img alt="license" src="https://img.shields.io/badge/license-proprietary-0B1F2A"/>
@@ -16,53 +16,39 @@
 **Global identity-aware private fabric that extends Render’s same-region private networking across regions.**
 
 > **Independent project; not affiliated with Render.**  
-> **v1.0.0 is frozen** as the acquisition-candidate baseline — see [`RELEASE_FREEZE.md`](./RELEASE_FREEZE.md).
+> **v1.0.0** freezes the implementation baseline ([`RELEASE_FREEZE.md`](./RELEASE_FREEZE.md)).  
+> **v1.1.0** expands the acquisition diligence data room — start at [`acquisition/README.md`](./acquisition/README.md).
 
 | | |
 |---|---|
-| **Version** | **1.0.0** (frozen) |
-| **Release** | https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0 |
+| **Current package** | **1.1.0** |
+| **Code freeze** | [v1.0.0](https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.0.0) |
+| **Diligence release** | [v1.1.0](https://github.com/theworker02/cross-region-private-networking/releases/tag/v1.1.0) |
 | **Repo** | https://github.com/theworker02/cross-region-private-networking |
 | **Live site** | https://theworker02.github.io/cross-region-private-networking/ |
-| **Demo** | [SIMULATION demo](https://theworker02.github.io/cross-region-private-networking/demo.html) |
-| **About** | [about](https://theworker02.github.io/cross-region-private-networking/about.html) |
-| **Target (Render)** | [render](https://theworker02.github.io/cross-region-private-networking/render.html) |
-| **Contact** | [contact](https://theworker02.github.io/cross-region-private-networking/contact.html) — GitHub [@theworker02](https://github.com/theworker02) |
+| **Demo** | [SIMULATION](https://theworker02.github.io/cross-region-private-networking/demo.html) |
+| **Contact** | [Contact page](https://theworker02.github.io/cross-region-private-networking/contact.html) · [@theworker02](https://github.com/theworker02) |
 | **License** | Proprietary — sale / acquisition only ([`LICENSE`](./LICENSE)) |
-| **Evaluate** | `.\evaluate.ps1` or `./evaluate.sh` → `evaluation/` |
+| **Evaluate** | See [`acquisition/EVALUATION_GUIDE.md`](./acquisition/EVALUATION_GUIDE.md) |
 | **Readiness** | [`ACQUISITION_READINESS_REPORT.md`](./ACQUISITION_READINESS_REPORT.md) |
 
 ## Problem
 
-Render private networking is **region-scoped**. Workloads in Virginia cannot privately address services in Frankfurt over Render’s internal network alone. Teams often fall back to public networking plus app-level auth.
-
-## Architecture
-
-```
-[VA private net]                         [FRA private net]
-  apps → fabric-node-va ══ rustls mTLS ══ fabric-node-fra ← apps
-           │                                      │
-     *.internal / *.global.internal          discovery + policy
-     LOCAL_NATIVE in-region · FABRIC_* cross-region
-```
+Render private networking is **region-scoped**. Cross-region teams often fall back to public networking plus app-level auth.
 
 ## Quick start
 
 ```powershell
-git checkout v1.0.0
+git checkout v1.1.0
 cargo test --workspace
 .\evaluate.ps1
-cargo run -p fabric-cli -- resolve payments.global.internal
 ```
 
-## Render fit
+## Acquisition package
 
-Extends the same-region private network model with global names and authenticated fabric paths. **Not affiliated with Render.** See [`docs/RENDER_GAP_MATRIX.md`](./docs/RENDER_GAP_MATRIX.md).
+Serious diligence tree: product brief, ICP, competitive landscape, Render integration/insertion, technical DD, security, IP, transfer, legal **drafts**.
 
-## Acquisition
-
-Diligence: [`acquisition/`](./acquisition/). One-pager: [`ACQUISITION.md`](./ACQUISITION.md).  
-**No production use** until written commercial license or completed acquisition/asset transfer.
+→ [`acquisition/README.md`](./acquisition/README.md) · [`ACQUISITION.md`](./ACQUISITION.md)
 
 ## License
 

@@ -12,9 +12,14 @@ Every document in this folder is a **draft exhibit outline** for counsel. Nothin
 | `01_NDA_OUTLINE.md` | Evaluation NDA outline |
 | `02_APA_ASSET_SCHEDULE_OUTLINE.md` | Asset purchase schedule outline |
 | `03_COMMERCIAL_LICENSE_OUTLINE.md` | Commercial license outline |
+| `IP_ASSIGNMENT_CHECKLIST.md` | IP assignment closing checklist |
+| `CONTRIBUTOR_ASSIGNMENT_REQUIREMENTS.md` | Contributor assignment requirements |
+| `ASSET_TRANSFER_CHECKLIST.md` | Asset transfer ops checklist |
+| `TRADEMARK_TRANSFER_CHECKLIST.md` | Marks / brand transfer |
+| `LICENSE_TRANSITION_NOTES.md` | Proprietary LICENSE → acquirer ownership |
 
 ## Rules
 
-- Do **not** treat these as executable forms without counsel customization
-- Deal agreements supersede root `LICENSE` only upon execution
-- No forged signature blocks or fake closing certificates are included
+- Do **not** treat these as executable forms without counsel customization  
+- Deal agreements supersede root `LICENSE` only upon execution  
+- No forged signature blocks or fake closing certificates are included  
