@@ -1,0 +1,9 @@
+﻿{
+  "label": "SIMULATED",
+  "baseline_public_https_rtt_ms": 40.0,
+  "fabric_path_rtt_ms": 48.05,
+  "overhead_ms": 8.049999999999997,
+  "fabric_connect_ms": 38.0,
+  "baseline_connect_ms": 25.0,
+  "notes": "In-process DNS/routing mean 0.004ms; cross-region RTT composed as modeled_public_rtt(40) + mTLS_ingress(8) + local_ops(0.050). NOT a live multi-region measurement."
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><title>Demo (SIMULATION)</title>
+<link rel="icon" href="../assets/brand/favicon.svg"/>
+<style>body{font-family:Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;background:#F4F7F6;color:#0B1F2A}
+.badge{background:#8a5a00;color:#fff;padding:.2rem .5rem;border-radius:4px;font-size:.75rem}
+canvas{width:100%;background:#0B1F2A;border-radius:8px}button{margin:.25rem;padding:.4rem .7rem;background:#1F7A6B;color:#fff;border:0;border-radius:6px;cursor:pointer}
+pre{background:#0B1F2A;color:#d7efe9;padding:1rem;border-radius:8px;overflow:auto}</style></head>
+<body>
+<p><a href="./">← Home</a> <span class="badge">SIMULATION</span></p>
+<h1>Live fabric demo</h1>
+<canvas id="c" width="800" height="240"></canvas>
+<div>
+<button onclick="act('break')">Break link</button>
+<button onclick="act('kill')">Kill FRA</button>
+<button onclick="act('revoke')">Revoke</button>
+<button onclick="act('lat')">Latency</button>
+<button onclick="act('pol')">Policy</button>
+<button onclick="act('evac')">Evacuate</button>
+</div>
+<pre id="log">VA → payments.global.internal → FRA (SIMULATED). Same-region would be LOCAL_NATIVE.</pre>
+<script>
+const S={link:1,fra:1,rev:0,lat:90};const L=document.getElementById('log');
+function act(k){if(k==='break')S.link=0;if(k==='kill')S.fra=0;if(k==='revoke')S.rev=1;if(k==='lat')S.lat=400;if(k==='pol')L.textContent='SIMULATION: ALLOW checkout→payments\n'+L.textContent;if(k==='evac'){S.fra=0;L.textContent='SIMULATION: network-only evacuate frankfurt\n'+L.textContent;}draw();
+if(k!=='pol'&&k!=='evac')L.textContent='SIMULATION action '+k+' lat='+S.lat+'\n'+L.textContent;}
+function draw(){const c=document.getElementById('c'),x=c.getContext('2d');x.fillStyle='#0B1F2A';x.fillRect(0,0,c.width,c.height);
+x.fillStyle='#1F7A6B';x.beginPath();x.arc(120,120,30,0,7);x.fill();x.fillStyle=S.fra?'#F4F7F6':'#553';x.beginPath();x.arc(680,120,30,0,7);x.fill();
+x.strokeStyle=(!S.link||S.rev||!S.fra)?'#a44':'#1F7A6B';x.lineWidth=4;x.beginPath();x.moveTo(150,120);x.lineTo(650,120);x.stroke();
+x.fillStyle='#d7efe9';x.fillText('FABRIC_RELAYED ~'+S.lat+'ms (not Render private net)',280,50);}
+draw();
+</script>
+</body></html>

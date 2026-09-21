@@ -1,0 +1,20 @@
+[package]
+name = "fabric-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "CLI for the cross-region private networking fabric"
+
+[[bin]]
+name = "fabric"
+path = "src/main.rs"
+
+[dependencies]
+fabric-core = { workspace = true }
+clap = { workspace = true }
+anyhow = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+chrono = { workspace = true }

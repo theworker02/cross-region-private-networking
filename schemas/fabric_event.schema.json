@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FabricEventEnvelope",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["schema_version", "at", "event"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "at": { "type": "string", "format": "date-time" },
+    "event": { "type": "object", "required": ["kind"] }
+  }
+}

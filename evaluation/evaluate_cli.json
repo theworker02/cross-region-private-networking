@@ -1,0 +1,151 @@
+﻿{
+  "drills": [
+    {
+      "detection_ms": 0.0153,
+      "label": "SIMULATED",
+      "name": "region_disappear_frankfurt",
+      "notes": "In-process failure injection; not live Render multi-region",
+      "recompute_ms": 0.0131,
+      "total_ms": 0.0287
+    },
+    {
+      "detection_ms": 0.0026,
+      "label": "SIMULATED",
+      "name": "region_disappear_virginia",
+      "notes": "In-process failure injection; not live Render multi-region",
+      "recompute_ms": 0.0019,
+      "total_ms": 0.0046
+    },
+    {
+      "detection_ms": 0.0015999999999999999,
+      "label": "SIMULATED",
+      "name": "region_disappear_singapore",
+      "notes": "In-process failure injection; not live Render multi-region",
+      "recompute_ms": 0.0015,
+      "total_ms": 0.0031999999999999997
+    }
+  ],
+  "fuzz": {
+    "crashes_saved": 6,
+    "dir": "fuzz/crashes",
+    "tried": 28
+  },
+  "live_multi_region": "NOT EXECUTED ΓÇö INFRASTRUCTURE UNAVAILABLE",
+  "payments_global": {
+    "fabric_route": null,
+    "name": "payments.global.internal",
+    "native_hostname": null,
+    "path_class": "Unavailable",
+    "reason": "UNAVAILABLE: no route: no healthy instances for payments"
+  },
+  "perf_gates": [
+    {
+      "max_allowed": 5.0,
+      "measured": 0.11147800000000001,
+      "name": "dns_resolve_mean_ms",
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "max_allowed": 2000.0,
+      "measured": 0.421,
+      "name": "policy_differential_100_ms",
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "max_allowed": 500.0,
+      "measured": 0.8968999999999999,
+      "name": "large_fabric_500_build_ms",
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "max_allowed": 10000.0,
+      "measured": 8.049999999999997,
+      "name": "simulated_overhead_ms_non_negative",
+      "pass": true,
+      "unit": "ms"
+    }
+  ],
+  "private_endpoint_drill": {
+    "detection_ms": 0.001,
+    "label": "SIMULATED",
+    "name": "privatelink_complement_mock",
+    "notes": "Complement mode: cross-region fabric reaches the Render region that owns the PrivateLink; PrivateLink itself follows Render public docs (RenderΓåÆAWS, not reverse; Private DNS unsupported). Fabric underlay between regions is not Render private networking.",
+    "recompute_ms": 0.0011,
+    "total_ms": 0.0021
+  },
+  "receipts": [
+    {
+      "at": "2026-09-21T14:36:59.500810800Z",
+      "digest": "f45ba73b95267d673556f8e4813882ca9492be976d6347c75a6ca1bbf46b90f1",
+      "issuer": "node-9cdabdf2929a",
+      "kind": {
+        "from": "frankfurt",
+        "service": "payments",
+        "to": null,
+        "total_failover_ms": 0.0287,
+        "type": "FAILOVER"
+      },
+      "observations": [
+        "detection_ms=0.015",
+        "recompute_ms=0.013",
+        "instances_before=2",
+        "label=SIMULATED_DRILL"
+      ]
+    },
+    {
+      "at": "2026-09-21T14:36:59.500866200Z",
+      "digest": "50a1b45f23c7edea7914293338b9db6942727b927972544ac1f8a315c44f0cc8",
+      "issuer": "node-9cdabdf2929a",
+      "kind": {
+        "from": "virginia",
+        "service": "payments",
+        "to": null,
+        "total_failover_ms": 0.0046,
+        "type": "FAILOVER"
+      },
+      "observations": [
+        "detection_ms=0.003",
+        "recompute_ms=0.002",
+        "instances_before=2",
+        "label=SIMULATED_DRILL"
+      ]
+    },
+    {
+      "at": "2026-09-21T14:36:59.500886600Z",
+      "digest": "2d5c7e2c4f6580d21ae9d58ca8efcfed48e5447a39a06c6bf92c993c3fbe3683",
+      "issuer": "node-9cdabdf2929a",
+      "kind": {
+        "from": "singapore",
+        "service": "payments",
+        "to": null,
+        "total_failover_ms": 0.0031999999999999997,
+        "type": "FAILOVER"
+      },
+      "observations": [
+        "detection_ms=0.002",
+        "recompute_ms=0.002",
+        "instances_before=2",
+        "label=SIMULATED_DRILL"
+      ]
+    },
+    {
+      "at": "2026-09-21T14:36:59.500904800Z",
+      "digest": "f3a03488447ebd2655dcfb05e5d0a8bbdf1e8ce630b7936c6d4639c1608e8ad3",
+      "issuer": "drill",
+      "kind": {
+        "name": "aurora.external",
+        "reason": "connect tls://vpce-docs-example.amazonaws.com:5432 via connector=local-mock-privatelink-complement (complement path AΓåÆfabricΓåÆBΓåÆgatewayΓåÆresource)",
+        "target": "frankfurt",
+        "type": "ROUTE"
+      },
+      "observations": [
+        "Complement mode: cross-region fabric reaches the Render region that owns the PrivateLink; PrivateLink itself follows Render public docs (RenderΓåÆAWS, not reverse; Private DNS unsupported). Fabric underlay between regions is not Render private networking.",
+        "path=connect tls://vpce-docs-example.amazonaws.com:5432 via connector=local-mock-privatelink-complement (complement path AΓåÆfabricΓåÆBΓåÆgatewayΓåÆresource)"
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}

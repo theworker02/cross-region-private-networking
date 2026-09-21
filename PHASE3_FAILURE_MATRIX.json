@@ -1,0 +1,18 @@
+{
+  "version": "0.4.0",
+  "scenarios": [
+    {"id": "region_disappear", "result": "DNS invalidate + unreachable; resolve fails or shifts", "tested": true},
+    {"id": "node_crash", "result": "deregister_node + DNS invalidate", "tested": true},
+    {"id": "stale_dns", "result": "cache drop on unhealthy/missing", "tested": true},
+    {"id": "identity_revocation", "result": "handshake/ingress reject", "tested": true},
+    {"id": "replay_handshake", "result": "ReplayedHandshake", "tested": true},
+    {"id": "ingress_bad_ip", "result": "reject", "tested": true},
+    {"id": "ingress_no_mtls", "result": "reject", "tested": true},
+    {"id": "policy_deny", "result": "PolicyDenied", "tested": true},
+    {"id": "cross_env", "result": "denied by default", "tested": true},
+    {"id": "export_default", "result": "denied until allow", "tested": true},
+    {"id": "evacuate_dry_run", "result": "no mutate", "tested": true},
+    {"id": "relay_labeling", "result": "never DIRECT", "tested": true},
+    {"id": "live_multi_region", "result": "NOT EXECUTED — INFRASTRUCTURE UNAVAILABLE", "tested": false}
+  ]
+}

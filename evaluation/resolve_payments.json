@@ -1,0 +1,16 @@
+﻿{
+  "name": "payments.internal",
+  "service": "payments",
+  "target_node": "node-c73529939c8c",
+  "target_region": "frankfurt",
+  "via_local_node": "node-b056f173474b",
+  "local_region": "virginia",
+  "cross_region": true,
+  "transport": "Relayed",
+  "port": 8080,
+  "protocol": "http",
+  "health": "Healthy",
+  "reason": "BALANCED latency=90.0 local=false health=Healthy loss=0.000; DIRECT unavailable; using PUBLIC_FABRIC_INGRESS (mTLS+allowlist over Internet ΓÇö not a private network)",
+  "latency_ms": 90.0
+}
+# transit: PUBLIC_FABRIC_INGRESS_MTLS (encrypted over public path ΓÇö not Render private networking)

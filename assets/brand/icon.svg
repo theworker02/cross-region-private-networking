@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Fabric icon">
+  <rect width="128" height="128" rx="24" fill="#0B1F2A"/>
+  <circle cx="40" cy="64" r="16" fill="#1F7A6B"/>
+  <circle cx="88" cy="64" r="16" fill="#F4F7F6"/>
+  <path d="M56 64 C64 40, 72 88, 80 64" fill="none" stroke="#1F7A6B" stroke-width="6" stroke-linecap="round"/>
+</svg>

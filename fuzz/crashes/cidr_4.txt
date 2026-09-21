@@ -1,0 +1,5 @@
+input:
+192.0.2.1
+
+error:
+invalid state: CIDR requires /prefix: 192.0.2.1

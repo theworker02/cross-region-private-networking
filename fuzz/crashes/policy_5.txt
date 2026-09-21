@@ -1,0 +1,5 @@
+input:
+explode from x to y
+
+error:
+invalid state: unknown action: explode

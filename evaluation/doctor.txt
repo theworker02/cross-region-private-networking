@@ -1,0 +1,20 @@
+﻿fabric doctor (local)
+identity: node-f7f97f975f0c gen=1 expires=2026-09-22 14:36:59.193305200 UTC
+peers: 1 active sessions
+services: 2 instances
+health: all registered instances routable
+partition: Connected
+auth_failures: 0
+ingress_enabled: true allowlist_cidrs: 3 (EXAMPLE/TEST ONLY ΓÇö replace with Render outbound CIDRs from https://render.com/docs or dashboard; these are RFC1918/TEST-NET samples, not official Render ranges)
+policy_version: 1
+payments.internal: OK ΓåÆ node-3ce0e838d608 (frankfurt) cross_region=true
+graph_edges_observed: 1
+--- doctor v2 evidence ---
+partition=Connected
+auth_failures=0
+name_ok payments.internal ΓåÆ node-3ce0e838d608 cross_region=true (canonical payments.fabric.internal)
+name_ok payments.fabric.internal ΓåÆ node-3ce0e838d608 cross_region=true (canonical payments.fabric.internal)
+name_ok payments.frankfurt.fabric.internal ΓåÆ node-3ce0e838d608 cross_region=true (canonical payments.frankfurt.fabric.internal)
+allowlist_source_note=EXAMPLE/TEST ONLY ΓÇö replace with Render outbound CIDRs from https://render.com/docs or dashboard; these are RFC1918/TEST-NET samples, not official Render ranges
+platform=local ephemeral_fs=false
+payments_instances=1 routable=1

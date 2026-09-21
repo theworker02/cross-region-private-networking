@@ -1,0 +1,11 @@
+{
+  "version": "0.5.0",
+  "real_multi_region": "NOT EXECUTED — INFRASTRUCTURE UNAVAILABLE",
+  "samples": [
+    {"name": "unit_tests", "label": "REAL_LOCAL", "passed": 75},
+    {"name": "perf_gates", "label": "REAL_LOCAL", "note": "see fabric evaluate"},
+    {"name": "rtt_harness", "label": "SIMULATED", "note": "additive overhead; not live"},
+    {"name": "regional_drills", "label": "SIMULATED"},
+    {"name": "privatelink_complement", "label": "SIMULATED"}
+  ]
+}

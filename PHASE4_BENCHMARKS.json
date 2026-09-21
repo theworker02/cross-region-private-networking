@@ -1,0 +1,36 @@
+{
+  "version": "0.4.0",
+  "captured_at": "2026-09-21",
+  "real_multi_region": "NOT EXECUTED — INFRASTRUCTURE UNAVAILABLE",
+  "samples": [
+    {
+      "name": "rtt_overhead_harness",
+      "label": "SIMULATED",
+      "baseline_public_https_rtt_ms": 40.0,
+      "fabric_path_rtt_ms": 48.05,
+      "overhead_ms": 8.05,
+      "fabric_connect_ms": 38.0,
+      "baseline_connect_ms": 25.0,
+      "notes": "Modeled public RTT + mTLS ingress overhead + measured in-process DNS/routing. Does not claim improvement over HTTPS; reports additive overhead."
+    },
+    {
+      "name": "large_fabric_sim_100",
+      "label": "SIMULATED",
+      "nodes": 100,
+      "regions": 10,
+      "edges": 17,
+      "seed": 42,
+      "build_ms": 0.42
+    },
+    {
+      "name": "unit_tests",
+      "label": "REAL_LOCAL",
+      "passed": 56,
+      "failed": 0
+    }
+  ],
+  "latency_map": {
+    "status": "NOT EXECUTED — INFRASTRUCTURE UNAVAILABLE",
+    "note": "No fabricated city-pair RTTs. Use fabric sim / Pages SIMULATION canvas for illustrative topology only."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "cidrs": [
+    "10.0.0.0/8",
+    "127.0.0.1/32",
+    "192.0.2.0/24"
+  ],
+  "source_note": "EXAMPLE/TEST ONLY — replace with Render outbound CIDRs from https://render.com/docs (search outbound IP) or your dashboard export. These RFC1918/TEST-NET samples are NOT official Render ranges and must not be treated as permanent truth.",
+  "deny_when_empty": true
+}

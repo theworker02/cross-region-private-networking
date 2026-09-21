@@ -1,0 +1,5 @@
+input:
+not-a-cidr
+
+error:
+invalid state: CIDR requires /prefix: not-a-cidr

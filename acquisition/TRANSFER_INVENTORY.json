@@ -1,0 +1,38 @@
+{
+  "package_version": "1.0.0",
+  "generated": "2026-09-21",
+  "product": "Cross-Region Private Networking",
+  "license": "LicenseRef-Proprietary",
+  "tag": "v1.0.0",
+  "includes": [
+    "crates/fabric-core",
+    "crates/fabric-cli",
+    "docs/",
+    "acquisition/",
+    "site/",
+    "assets/brand/",
+    "schemas/",
+    "config/",
+    "examples/",
+    "evaluate.ps1",
+    "evaluate.sh",
+    "LICENSE",
+    "README.md",
+    "ACQUISITION.md",
+    "ACQUISITION_READINESS_REPORT.md",
+    "RELEASE_NOTES_v1.0.0.md"
+  ],
+  "excludes": [
+    "target/",
+    "secrets",
+    "Agent-2-storage-features",
+    "executed-legal-agreements"
+  ],
+  "readiness": "READY_WITH_DISCLOSED_ITEMS",
+  "disclosures": [
+    "live_multi_region_NOT_EXECUTED",
+    "no_third_party_pentest",
+    "legal_drafts_not_executed",
+    "example_cidrs_not_official_render_ranges"
+  ]
+}

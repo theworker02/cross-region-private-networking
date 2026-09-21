@@ -1,0 +1,5 @@
+input:
+/8
+
+error:
+invalid state: bad CIDR addr: invalid IP address syntax

@@ -1,0 +1,21 @@
+﻿{
+  "name": "payments.global.internal",
+  "path_class": "FabricRelayed",
+  "native_hostname": null,
+  "fabric_route": {
+    "name": "payments.fabric.internal",
+    "service": "payments",
+    "target_node": "node-3bde77864877",
+    "target_region": "frankfurt",
+    "via_local_node": "node-307161c4f0e0",
+    "local_region": "virginia",
+    "cross_region": true,
+    "transport": "Relayed",
+    "port": 8080,
+    "protocol": "http",
+    "health": "Healthy",
+    "reason": "BALANCED latency=90.0 local=false health=Healthy loss=0.000",
+    "latency_ms": 90.0
+  },
+  "reason": "cross-region ΓÇö FABRIC_RELAYED (encrypted underlay may traverse public Internet; not Render private networking)"
+}

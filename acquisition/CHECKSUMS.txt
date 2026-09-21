@@ -1,0 +1,16 @@
+# CHECKSUMS — v1.0.0
+
+Generate after tagging:
+
+```powershell
+Get-FileHash -Algorithm SHA256 LICENSE, README.md, Cargo.toml, acquisition/SBOM.json, RELEASE_NOTES_v1.0.0.md |
+  Format-Table -AutoSize
+```
+
+```bash
+sha256sum LICENSE README.md Cargo.toml acquisition/SBOM.json RELEASE_NOTES_v1.0.0.md
+```
+
+Authoritative tree: git annotated tag **`v1.0.0`**.
+
+Prior prep file `CHECKSUMS_v0.5.0.md` is superseded for current release purposes.

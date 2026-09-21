@@ -1,0 +1,7 @@
+{
+  "version": "0.4.0",
+  "label": "SIMULATED",
+  "note": "Phase 3 harness results captured alongside Phase 4; see PHASE4_BENCHMARKS.json for canonical file.",
+  "rtt_overhead_ms": 8.05,
+  "large_fabric_100_build_ms": 0.42
+}

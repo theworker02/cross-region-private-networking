@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><title>Architecture</title></style></head>
+<body style="font-family:Segoe UI,sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem">
+<p><a href="./">← Home</a></p>
+<h1>Architecture</h1>
+<pre>Same region:  App → Render private hostname (LOCAL_NATIVE)
+Cross region: App → fabric-local → [mTLS underlay] → fabric-remote → private svc
+PrivateLink:  remote → fabric → PL region → AWS (documented PL only)</pre>
+<p>See <code>docs/RENDER_INTEGRATION_ARCHITECTURE.md</code>.</p>
+</body></html>
