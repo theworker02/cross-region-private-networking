@@ -18,12 +18,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Prepare site publish directory
+        run: |
+          mkdir -p _pages
+          cp -R site/. _pages/
+          # Ensure brand assets are present even if copied elsewhere
+          mkdir -p _pages/assets/brand
+          cp -R assets/brand/. _pages/assets/brand/ || true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><title>Render fit</title>
-<style>body{font-family:Segoe UI,sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem} table{border-collapse:collapse;width:100%} td,th{border:1px solid #ccc;padding:.4rem;text-align:left}</style></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Architecture — Fabric</title>
+  <link rel="icon" href="assets/brand/favicon.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
 <body>
-<p><a href="./">← Home</a></p>
-<h1>Render fit</h1>
-<p>Independent project; not affiliated with Render. Thesis: extend same-region private networking globally.</p>
-<table>
-<tr><th>Capability</th><th>Class</th></tr>
-<tr><td>Same-region private net</td><td>RENDER_NATIVE</td></tr>
-<tr><td>Cross-region private net</td><td>FABRIC_PROVIDED</td></tr>
-<tr><td>PrivateLink Render→AWS</td><td>RENDER_NATIVE</td></tr>
-<tr><td>Private DNS for PrivateLink</td><td>FABRIC alias complement</td></tr>
-<tr><td>Change region in place</td><td>Render gap (documented)</td></tr>
-</table>
-<p>Sources: <a href="https://render.com/docs/private-network">private-network</a>, <a href="https://render.com/docs/regions">regions</a>, <a href="https://render.com/docs/private-link">private-link</a>.</p>
-<p>Full matrix: <code>docs/RENDER_GAP_MATRIX.md</code></p>
-</body></html>
+  <div class="wrap">
+    <header class="site">
+      <a href="./"><img class="logo" src="assets/brand/logo.svg" alt="Fabric"/></a>
+      <nav class="site" aria-label="Primary">
+        <a href="./">Home</a>
+        <a href="demo.html">Demo</a>
+        <a href="about.html">About</a>
+        <a href="render.html">Target: Render</a>
+        <a href="contact.html">Contact</a>
+        <a href="due-diligence.html">Due diligence</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Architecture</h1>
+      <p class="lead">Regional private islands bridged by authenticated fabric nodes. In-region traffic prefers <code>LOCAL_NATIVE</code>.</p>
+      <pre class="out">[VA private net]                    [FRA private net]
+  apps → fabric-node-va ══ rustls mTLS ══ fabric-node-fra ← apps
+           │                                      │
+     *.internal / *.global.internal          policy + discovery</pre>
+      <p><a href="https://github.com/theworker02/cross-region-private-networking/blob/master/docs/ARCHITECTURE.md">Full architecture doc</a></p>
+    </main>
+    <footer class="site">Not affiliated with Render®</footer>
+  </div>
+</body>
+</html>

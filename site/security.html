@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><title>Security</title></head>
-<body style="font-family:Segoe UI,sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem">
-<p><a href="./">← Home</a></p>
-<h1>Security</h1>
-<ul>
-<li>Join requires crypto identity + admission — config alone insufficient</li>
-<li>Public fabric ingress: mTLS + CIDR allowlist (CIDRs shared ≠ tenant identity)</li>
-<li>Quarantine revokes routes and preserves forensics</li>
-<li>Untrusted route advertisements rejected</li>
-</ul>
-<p><code>docs/THREAT_MODEL.md</code> · <code>acquisition/SECURITY_REVIEW.md</code></p>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Security — Fabric</title>
+  <link rel="icon" href="assets/brand/favicon.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a href="./"><img class="logo" src="assets/brand/logo.svg" alt="Fabric"/></a>
+      <nav class="site" aria-label="Primary">
+        <a href="./">Home</a>
+        <a href="demo.html">Demo</a>
+        <a href="about.html">About</a>
+        <a href="render.html">Target: Render</a>
+        <a href="contact.html">Contact</a>
+        <a href="due-diligence.html">Due diligence</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Security</h1>
+      <ul class="clean">
+        <li>Ed25519 identity + TrustStore</li>
+        <li>rustls mTLS (Fabric CA + WebPki + TrustStore)</li>
+        <li>CIDR allowlist + default-deny policy</li>
+        <li>Route advertisement security + quarantine</li>
+      </ul>
+      <p><a href="https://github.com/theworker02/cross-region-private-networking/blob/master/docs/THREAT_MODEL.md">Threat model</a>
+        · <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/acquisition/SECURITY_REVIEW.md">Security review</a></p>
+    </main>
+    <footer class="site">Not affiliated with Render®</footer>
+  </div>
+</body>
+</html>

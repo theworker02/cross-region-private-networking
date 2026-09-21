@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Target: Render — Fabric</title>
+  <link rel="icon" href="assets/brand/favicon.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a href="./"><img class="logo" src="assets/brand/logo.svg" alt="Fabric"/></a>
+      <nav class="site" aria-label="Primary">
+        <a href="./">Home</a>
+        <a href="demo.html">Demo</a>
+        <a href="about.html">About</a>
+        <a class="active" href="render.html">Target: Render</a>
+        <a href="contact.html">Contact</a>
+        <a href="due-diligence.html">Due diligence</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="badges">
+        <span class="badge dark">Acquisition / integration target</span>
+        <span class="badge warn">Independent — not affiliated with Render</span>
+      </div>
+      <h1>Targeted company: Render</h1>
+      <p class="lead">
+        The strategic fit for this product is <strong>Render</strong> — specifically teams running
+        multi-region services who already rely on Render’s same-region private networking and need
+        a global, identity-aware extension.
+      </p>
+
+      <div class="panel">
+        <h2 style="margin-top:0">Thesis</h2>
+        <p>Prefer Render’s excellent <strong>same-region private networking</strong> whenever traffic stays in-region (<code>LOCAL_NATIVE</code>). Use Fabric only for <strong>cross-region</strong> authenticated paths, stable global names (<code>*.global.internal</code>), mTLS identity, and policy — without making every service public by default.</p>
+      </div>
+
+      <div class="panel">
+        <h2 style="margin-top:0">Documented gap (public Render posture)</h2>
+        <p>Render private networks are <strong>region-scoped</strong>. Cross-region communication commonly uses the public network plus application-level authentication. That is a workable pattern — and also the gap this fabric is designed to narrow for private, named, health-aware service connectivity.</p>
+        <p>Diligence citations live in the repo gap matrix:
+          <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/docs/RENDER_GAP_MATRIX.md">docs/RENDER_GAP_MATRIX.md</a>
+          ·
+          <a href="https://github.com/theworker02/cross-region-private-networking/blob/master/docs/RENDER_INTEGRATION_ARCHITECTURE.md">integration architecture</a>
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2 style="margin-top:0">What this is not</h2>
+        <ul class="clean">
+          <li>Not a Render product, partnership claim, or endorsement</li>
+          <li>Not a claim that live multi-region VA↔FRA was executed in this package (see readiness report)</li>
+          <li>Not a substitute for Render’s same-region private networking — it <em>extends</em> that model</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="demo.html">See SIMULATION demo</a>
+        <a class="btn ghost" href="contact.html">Acquisition contact</a>
+      </div>
+    </main>
+
+    <footer class="site">
+      Independent project; not affiliated with, endorsed by, or sponsored by Render®.
+    </footer>
+  </div>
+</body>
+</html>
