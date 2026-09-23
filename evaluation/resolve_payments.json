@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "payments.internal",
   "service": "payments",
   "target_node": "node-c73529939c8c",

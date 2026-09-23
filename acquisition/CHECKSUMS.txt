@@ -1,4 +1,4 @@
-﻿# SHA256 checksums — v1.1.0
+# SHA256 checksums — v1.1.0
 
 Generated: 2026-09-21
 Authoritative tag: v1.1.0

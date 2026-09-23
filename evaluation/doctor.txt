@@ -1,4 +1,4 @@
-﻿fabric doctor (local)
+fabric doctor (local)
 identity: node-f7f97f975f0c gen=1 expires=2026-09-22 14:36:59.193305200 UTC
 peers: 1 active sessions
 services: 2 instances
